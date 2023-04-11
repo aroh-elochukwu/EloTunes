@@ -1,7 +1,42 @@
-﻿
+﻿@model IEnumerable<Artist>
 @{
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Artist Index</h1>
+
+<table class="table table-bordered table-striped " style="100%">
+    <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Nationality
+            </th>
+            <th>
+                Date of Birth
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var obj in Model)
+        {
+            <tr>
+                <td width="30%">
+                    @obj.Name                
+                </td>
+                <td width="30%">
+                    @obj.Nationality
+                </td>
+                <td width="20%">
+                    @obj.DateOfBirth
+                </td>
+
+            </tr>
+            
+
+        }
+    </tbody>
+</table>
 
