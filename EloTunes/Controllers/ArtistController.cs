@@ -16,5 +16,10 @@ namespace EloTunes.Controllers
             IEnumerable<Artist> artistList = _db.Artists;
             return View(artistList);
         }
+
+        public IActionResult Create()
+        {            
+            return View();
+        }
     }
 }
